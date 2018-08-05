@@ -1,0 +1,9 @@
+mutation {
+    userOne: createUser(
+        data: {
+            name: "Test User"
+        }
+    ) {
+        id
+    }
+}
