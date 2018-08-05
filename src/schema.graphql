@@ -1,15 +1,14 @@
-#import Query.users from "./generated/prisma.graphql"
-#import Mutation.createUser from "./generated/prisma.graphql"
+#import Query.usersConnection from "./generated/prisma.graphql"
 
 type User {
   id: ID!
   name: String!
 }
 
-# type Query {
+type Query {
+  user(id: ID!): User!
+}
 
-# }
-
-# type Mutation {
-
-# }
+type Mutation {
+  createUser(name: String!): User!
+}
